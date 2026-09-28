@@ -1,0 +1,18 @@
+# 期望：02 大量同尺寸（固定容器）。逐行核对；口径与公式见仓库根 README.md 第二、五节。
+# 复核：python pack.py solve samples/cases/02-many-identical.json var/02-many-identical.json，再按 README 第五节清单逐条核对；时间与峰值内存在进程外测。
+case=samples/cases/02-many-identical.json
+mode=fixed
+container=200x200
+container_area=40000
+gap_max=2
+rectangles=1400
+total_area=35000
+utilization_min=0.875000
+time_limit_s=5
+invariant=placed_all：placements 与输入逐条对应、顺序一致，每件恰好一次
+invariant=in_bounds：整数坐标，0 <= x 且 x + w' <= W，0 <= y 且 y + h' <= H
+invariant=no_overlap：任意两件内部不相交，允许边界或角贴合
+invariant=rotation_rule：rotated 只取 true/false；rotatable=false 的件不得旋转
+invariant=gap_limit：每个整数扫描线上相邻两件之间的空隙 <= gap_max（贴容器边一侧的空白不算）
+invariant=determinism：连跑两遍、再换 PYTHONHASHSEED=0/1/2 跑，输出除 elapsed_ms 外逐字节相同
+note=大量同尺寸：1400 件 5x5 全部装入（35 行 x 40 列），门槛 0.875 与全装等价。

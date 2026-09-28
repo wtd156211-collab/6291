@@ -1,0 +1,19 @@
+# 期望：06 自适应容器（按内容）。逐行核对；口径与公式见仓库根 README.md 第二、五节。
+# 复核：python pack.py solve samples/cases/06-auto-adaptive.json var/06-auto-adaptive.json，再按 README 第五节清单逐条核对；时间与峰值内存在进程外测。
+case=samples/cases/06-auto-adaptive.json
+mode=auto
+container=engine-selected
+container_area_max=4000
+gap_max=4
+rectangles=36
+total_area=3600
+utilization_min=0.900000
+time_limit_s=2
+invariant=placed_all：placements 与输入逐条对应、顺序一致，每件恰好一次
+invariant=in_bounds：整数坐标，0 <= x 且 x + w' <= W，0 <= y 且 y + h' <= H
+invariant=no_overlap：任意两件内部不相交，允许边界或角贴合
+invariant=rotation_rule：rotated 只取 true/false；rotatable=false 的件不得旋转
+invariant=gap_limit：每个整数扫描线上相邻两件之间的空隙 <= gap_max（贴容器边一侧的空白不算）
+invariant=determinism：连跑两遍、再换 PYTHONHASHSEED=0/1/2 跑，输出除 elapsed_ms 外逐字节相同
+note=自适应：容器由引擎选定；面积上限 4000 与利用率门槛 0.900000 等价（3600 / 4000）。
+note=引擎自己挑容器，只要面积不超过 4000 且满足全部不变量同样算过。

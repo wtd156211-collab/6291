@@ -1,0 +1,22 @@
+{
+  "mode": "fixed",
+  "gap_max": 0,
+  "container": {"width": 100, "height": 100},
+  "rectangles": [
+    {"id": "r001", "width": 35, "height": 20, "rotatable": true},
+    {"id": "r002", "width": 25, "height": 20, "rotatable": true},
+    {"id": "r003", "width": 40, "height": 20, "rotatable": true},
+    {"id": "r004", "width": 30, "height": 35, "rotatable": true},
+    {"id": "r005", "width": 45, "height": 35, "rotatable": false},
+    {"id": "r006", "width": 25, "height": 35, "rotatable": true},
+    {"id": "r007", "width": 20, "height": 25, "rotatable": true},
+    {"id": "r008", "width": 20, "height": 25, "rotatable": true},
+    {"id": "r009", "width": 20, "height": 25, "rotatable": true},
+    {"id": "r010", "width": 40, "height": 25, "rotatable": true},
+    {"id": "r011", "width": 10, "height": 20, "rotatable": true},
+    {"id": "r012", "width": 10, "height": 20, "rotatable": true},
+    {"id": "r013", "width": 10, "height": 20, "rotatable": true},
+    {"id": "r014", "width": 10, "height": 20, "rotatable": true},
+    {"id": "r015", "width": 60, "height": 20, "rotatable": false}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "mode": "fixed",
+  "gap_max": 0,
+  "container": {"width": 30, "height": 25},
+  "rectangles": [
+    {"id": "r001", "width": 20, "height": 30, "rotatable": true},
+    {"id": "r002", "width": 10, "height": 5, "rotatable": false},
+    {"id": "r003", "width": 10, "height": 5, "rotatable": false},
+    {"id": "r004", "width": 10, "height": 5, "rotatable": false}
+  ]
+}
